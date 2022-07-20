@@ -14,8 +14,15 @@ a4 = Jogos("CS:GO","FPS","PC")
 
 lista = [a1,a2,a3,a4]
 
-@app.route('/inicio')
+@app.route('/')
 def ola():
     return render_template('lista.html',titulo='Jogos',jogos= lista)
 
+@app.route('/novo')
+def novo():
+    return render_template('novo.html',titulo="titulo") 
+
+@app.route('/criar')
+def criar():
+    return render_template('novo.html',titulo="titulo") 
 app.run()
